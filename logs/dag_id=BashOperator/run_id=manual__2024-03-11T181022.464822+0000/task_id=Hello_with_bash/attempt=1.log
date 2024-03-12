@@ -1,0 +1,17 @@
+[2024-03-11T18:10:23.645+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: BashOperator.Hello_with_bash manual__2024-03-11T18:10:22.464822+00:00 [queued]>
+[2024-03-11T18:10:23.653+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: BashOperator.Hello_with_bash manual__2024-03-11T18:10:22.464822+00:00 [queued]>
+[2024-03-11T18:10:23.653+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-11T18:10:23.665+0000] {taskinstance.py:2214} INFO - Executing <Task(BashOperator): Hello_with_bash> on 2024-03-11 18:10:22.464822+00:00
+[2024-03-11T18:10:23.669+0000] {standard_task_runner.py:60} INFO - Started process 3767 to run task
+[2024-03-11T18:10:23.672+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'BashOperator', 'Hello_with_bash', 'manual__2024-03-11T18:10:22.464822+00:00', '--job-id', '560', '--raw', '--subdir', 'DAGS_FOLDER/1PrimerDag.py', '--cfg-path', '/tmp/tmpeoyuouxe']
+[2024-03-11T18:10:23.673+0000] {standard_task_runner.py:88} INFO - Job 560: Subtask Hello_with_bash
+[2024-03-11T18:10:23.717+0000] {task_command.py:423} INFO - Running <TaskInstance: BashOperator.Hello_with_bash manual__2024-03-11T18:10:22.464822+00:00 [running]> on host 482398f6ce07
+[2024-03-11T18:10:23.788+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='BashOperator' AIRFLOW_CTX_TASK_ID='Hello_with_bash' AIRFLOW_CTX_EXECUTION_DATE='2024-03-11T18:10:22.464822+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-11T18:10:22.464822+00:00'
+[2024-03-11T18:10:23.790+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-03-11T18:10:23.790+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'Hola este es mi primer BashOperator'"]
+[2024-03-11T18:10:23.799+0000] {subprocess.py:86} INFO - Output:
+[2024-03-11T18:10:23.800+0000] {subprocess.py:93} INFO - Hola este es mi primer BashOperator
+[2024-03-11T18:10:23.801+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-03-11T18:10:23.822+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=BashOperator, task_id=Hello_with_bash, execution_date=20240311T181022, start_date=20240311T181023, end_date=20240311T181023
+[2024-03-11T18:10:23.844+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-11T18:10:23.862+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

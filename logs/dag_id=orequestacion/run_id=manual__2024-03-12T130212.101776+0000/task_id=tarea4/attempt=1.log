@@ -1,0 +1,17 @@
+[2024-03-12T13:02:19.177+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: orequestacion.tarea4 manual__2024-03-12T13:02:12.101776+00:00 [queued]>
+[2024-03-12T13:02:19.195+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: orequestacion.tarea4 manual__2024-03-12T13:02:12.101776+00:00 [queued]>
+[2024-03-12T13:02:19.196+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-12T13:02:19.213+0000] {taskinstance.py:2214} INFO - Executing <Task(BashOperator): tarea4> on 2024-03-12 13:02:12.101776+00:00
+[2024-03-12T13:02:19.218+0000] {standard_task_runner.py:60} INFO - Started process 408 to run task
+[2024-03-12T13:02:19.221+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'orequestacion', 'tarea4', 'manual__2024-03-12T13:02:12.101776+00:00', '--job-id', '650', '--raw', '--subdir', 'DAGS_FOLDER/5.1_orquestacion.py', '--cfg-path', '/tmp/tmp11mnw3qg']
+[2024-03-12T13:02:19.223+0000] {standard_task_runner.py:88} INFO - Job 650: Subtask tarea4
+[2024-03-12T13:02:19.278+0000] {task_command.py:423} INFO - Running <TaskInstance: orequestacion.tarea4 manual__2024-03-12T13:02:12.101776+00:00 [running]> on host 3c4fb6c9e724
+[2024-03-12T13:02:19.358+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='orequestacion' AIRFLOW_CTX_TASK_ID='tarea4' AIRFLOW_CTX_EXECUTION_DATE='2024-03-12T13:02:12.101776+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-12T13:02:12.101776+00:00'
+[2024-03-12T13:02:19.359+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-03-12T13:02:19.360+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'sleep 2 && echo "Tarea 1"']
+[2024-03-12T13:02:19.373+0000] {subprocess.py:86} INFO - Output:
+[2024-03-12T13:02:21.375+0000] {subprocess.py:93} INFO - Tarea 1
+[2024-03-12T13:02:21.376+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-03-12T13:02:21.401+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=orequestacion, task_id=tarea4, execution_date=20240312T130212, start_date=20240312T130219, end_date=20240312T130221
+[2024-03-12T13:02:21.444+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-12T13:02:21.478+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

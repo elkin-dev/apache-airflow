@@ -1,0 +1,27 @@
+[2024-03-11T18:05:03.411+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: BashOperator.Hello_with_bash scheduled__2022-07-13T00:00:00+00:00 [queued]>
+[2024-03-11T18:05:03.441+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: BashOperator.Hello_with_bash scheduled__2022-07-13T00:00:00+00:00 [queued]>
+[2024-03-11T18:05:03.442+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-03-11T18:05:03.500+0000] {taskinstance.py:2214} INFO - Executing <Task(BashOperator): Hello_with_bash> on 2022-07-13 00:00:00+00:00
+[2024-03-11T18:05:03.507+0000] {standard_task_runner.py:60} INFO - Started process 2070 to run task
+[2024-03-11T18:05:03.511+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'BashOperator', 'Hello_with_bash', 'scheduled__2022-07-13T00:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/1PrimerDag.py', '--cfg-path', '/tmp/tmpxvfn2c6c']
+[2024-03-11T18:05:03.513+0000] {standard_task_runner.py:88} INFO - Job 17: Subtask Hello_with_bash
+[2024-03-11T18:05:03.584+0000] {task_command.py:423} INFO - Running <TaskInstance: BashOperator.Hello_with_bash scheduled__2022-07-13T00:00:00+00:00 [running]> on host 482398f6ce07
+[2024-03-11T18:05:03.671+0000] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='BashOperator' AIRFLOW_CTX_TASK_ID='Hello_with_bash' AIRFLOW_CTX_EXECUTION_DATE='2022-07-13T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-07-13T00:00:00+00:00'
+[2024-03-11T18:05:03.674+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-03-11T18:05:03.675+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "echo'Hola este es mi primer BashOperator'"]
+[2024-03-11T18:05:03.688+0000] {subprocess.py:86} INFO - Output:
+[2024-03-11T18:05:03.690+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 1: echoHola este es mi primer BashOperator: command not found
+[2024-03-11T18:05:03.691+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2024-03-11T18:05:03.703+0000] {taskinstance.py:2728} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2024-03-11T18:05:03.707+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=BashOperator, task_id=Hello_with_bash, execution_date=20220713T000000, start_date=20240311T180503, end_date=20240311T180503
+[2024-03-11T18:05:03.722+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 17 for task Hello_with_bash (Bash command failed. The command returned a non-zero exit code 127.; 2070)
+[2024-03-11T18:05:03.766+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-03-11T18:05:03.786+0000] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

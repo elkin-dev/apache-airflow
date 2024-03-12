@@ -1,0 +1,2 @@
+[2024-03-12T12:42:16.019+0000] {taskinstance.py:1969} INFO - Dependencies not met for <TaskInstance: BashOperator.Hello_with_bash scheduled__2024-03-11T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2024-03-12T12:42:16.022+0000] {local_task_job_runner.py:160} INFO - Task is not able to be run
